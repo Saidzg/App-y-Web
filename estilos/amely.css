@@ -1,0 +1,312 @@
+/* Importamos la fuente Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Un tono más claro */
+    color: #000000;
+}
+
+/* Estilos para la imagen del logo */
+h1 {
+    display: flex; /* Para alinear la imagen y el texto en una línea */
+    align-items: center;
+    font-size: 1.8rem; /* Ajusta el tamaño del texto del título */
+}
+
+h1 img.logo {
+    width: 80px; /* Ajusta el tamaño de la imagen según prefieras */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    border-radius: 15%;
+}
+
+/* Estilos para la cabecera y navegación */
+header {
+    background-color: #000000; /* Azul oscuro */
+    color: #fff;
+    padding: 0px;
+    position: fixed; /* Mantiene la barra en la parte superior */
+    top: 0; /* Alinea la barra al borde superior */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Se asegura de que esté por encima de otros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff; /* Enlaces en blanco */
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center; /* Alinea el texto y el ícono verticalmente */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+nav ul li a i {
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+nav ul li a.active {
+    color: #ffcc00; /* Color amarillo suave */
+}
+
+/* Hover en color amarillo */
+nav ul li a:hover {
+    color: #f39c12; /*  naranja en hover */
+}
+
+/* Estilo para el ícono de menú hamburguesa */
+.menu-icon {
+    font-size: 2rem;
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 50px; /* Acomodamos el menú para la barra más delgada */
+    right: 10%; /* Alinea el menú a la derecha */
+    background-color: #34495e;
+    width: 80%; /* Ancho del menú */
+    margin: 0 auto; /* Centra el menú */
+    text-align: center;
+}
+
+.nav-links.active li {
+    display: block;
+    padding: 10px 0;
+    width: 100%; /* Hace que los enlaces ocupen el 100% del ancho del menú */
+    text-align: center; /* Centra el texto de los enlaces */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        top: 40px; /* Acomodamos la posición en móviles */
+    }
+}
+
+/* Estilos para la sección de portada */
+.portada {
+    height: 70vh; /* Altura completa de la ventana */
+    background-image: url('../img/portada.jpg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la sección */
+    background-position: center; /* La imagen se centra */
+    background-attachment: fixed; /* Efecto de desplazamiento parallax */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+/* Efecto de oscurecimiento */
+.portada .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido para mayor legibilidad */
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.portada h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.portada p {
+    font-size: 1.2rem;
+}
+
+.btn-portada {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f1c40f; /* Amarillo suave */
+    color: #ffffff; /*  azul oscuro */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-portada:hover {
+    background-color: #f39c12; /* Amarillo más oscuro al pasar el ratón */
+}
+
+/* Adaptación a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .portada h2 {
+        font-size: 2rem;
+    }
+
+    .portada p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para proyectos */
+.projects {
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.week-content {
+    display: none; /* Oculto por defecto */
+    padding: 10px 20px;
+    background-color: #b5b9b9; /*  suave */
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.week-title {
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #000158; /* Azul suave */
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between; /* Distribuye el texto y el icono */
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.week-title:hover {
+    background-color: #13058f; /* Azul más oscuro en hover */
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease; /* Animación de rotación */
+}
+
+.arrow-icon.rotated {
+    transform: rotate(180deg); /* Rotar hacia arriba */
+}
+
+.project-link {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 12px;
+    background-color: #27ae60; /* Verde suave */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: #2ecc71; /* Verde más oscuro en hover */
+}
+
+.download-btn {
+    background-color: #e67e22; /* Naranja para descargar */
+}
+
+.download-btn:hover {
+    background-color: #d35400; /* Naranja más oscuro en hover */
+}
+
+.github-btn {
+    background-color: #2c3e50; /* Azul oscuro para GitHub */
+}
+
+.github-btn:hover {
+    background-color: #34495e; /* Azul más oscuro en hover */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    color: #333; /* Color más suave para el texto */
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+    background-color: #000000; /* Fondo oscuro */
+    color: #fff; /* Color del texto */
+    margin-top: 20px; /* Espacio superior para separación */
+}
+
+footer p {
+    margin: 0; /* Elimina márgenes */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
+
+.footer-links {
+    margin-top: 10px; /* Espacio entre el texto y los enlaces */
+}
+
+.footer-links a {
+    color: #f1c40f; /* Color amarillo suave para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px; /* Espaciado horizontal entre enlaces */
+    transition: color 0.3s; /* Transición suave para el hover */
+    display: inline-flex; /* Permite alinear los íconos y texto */
+    align-items: center; /* Alinea el ícono y el texto verticalmente */
+}
+
+.footer-links a i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.footer-links a:hover {
+    color: #fff; /* Cambia a blanco en hover */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas Por Semanas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="imagen" href="img/rosa.png">
+    <link rel="stylesheet" href="estilos/amely.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                <img src="img/logo.png" alt="Logo de Tu Said" class="logo">
+            </h1>
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#proyectos" class="active"><i class="fas fa-folder"></i> Semanas</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="portada">
+        <div class="overlay">
+            <h2>Tareas por Semanas</h2>
+            <a href="index.html" class="btn-portada">Inicio</a>
+        </div>
+    </section>
+      
+    <section id="proyectos" class="projects">
+        <h2>Tareas por Semanas</h2>
+    
+        <div class="project">
+            <h3 class="week-title" onclick="toggleMenu('semana1', this)">
+                Semana 1
+                <i class="arrow-icon">&#9650;</i> <!-- Ícono de flecha -->
+            </h3>
+            <div id="semana1" class="week-content">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="aplicaciones1">
+                    <label for="aplicaciones1">Infografia de Fundamentos de Apps Moviles</label>
+                </div>
+                <!-- Ver contenido que depende si es PDF o no -->
+                <a href="proyecto/S1/Fundamentos de Apps Móviles S1.pdf" class="project-link" onclick="verContenido(event, this)"><i class="fas fa-eye"></i> Ver contenido</a>
+                
+                <a href="proyecto/S1/Fundamentos de Apps Móviles S1.pdf" class="project-link download-btn" download><i class="fas fa-download"></i> Descargar</a>
+                
+                <!-- Enlace a GitHub -->
+                <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank"><i class="fab fa-github"></i> Ver en GitHub</a>
+            </div>
+        </div>
+
+        <!-- Semana 2 -->
+        <div class="project">
+            <h3 class="week-title" onclick="toggleMenu('semana2', this)">
+                Semana 2: Intalación de Dart
+                <i class="arrow-icon">&#9650;</i> <!-- Ícono de flecha -->
+            </h3>
+            <div id="semana2" class="week-content">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="aplicaciones1">
+                    <label for="aplicaciones1">Instalación de Dart</label>
+                </div>
+                <!-- Ver contenido que depende si es PDF o no -->
+                <a href="proyecto/S2/Intalacion de Dart y Flutter.pdf" class="project-link" onclick="verContenido(event, this)"><i class="fas fa-eye"></i> Ver contenido</a>
+                
+                <a href="proyecto/S2/Intalacion de Dart y Flutter.pdf" class="project-link download-btn" download><i class="fas fa-download"></i> Descargar</a>
+                
+                <!-- Enlace a GitHub -->
+                <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank"><i class="fab fa-github"></i> Ver en GitHub</a>
+            </div>
+        </div>
+
+        <!-- Semana 3 -->
+<div class="project">
+    <h3 class="week-title" onclick="toggleMenu('semana3', this)">
+        Semana 3
+        <i class="arrow-icon">&#9650;</i> <!-- Ícono de flecha -->
+    </h3>
+    <div id="semana3" class="week-content">
+        <div class="checkbox-container">
+            <input type="checkbox" id="aplicaciones1">
+            <label for="aplicaciones1">Dart ejercicios 1</label>
+        </div>
+
+        <!-- Primera fila de botones -->
+        <div class="button-row">
+            <a href="proyecto/S3/programas/programas/index.dart" class="project-link" onclick="verContenido(event, this)">
+                <i class="fas fa-eye"></i> Ver contenido
+            </a>
+            <a href="proyecto/S3/programas.rar" class="project-link download-btn" download>
+                <i class="fas fa-download"></i> Descargar
+            </a>
+            <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank">
+                <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+        </div>
+
+        <!-- Segunda fila de botones -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="aplicaciones2">
+            <label for="aplicaciones2">Perimetro</label>
+        </div>
+        <div class="button-row">
+            <a href="proyecto/S3/programas/programas/perimetro.dart" class="project-link" onclick="verContenido(event, this)">
+                <i class="fas fa-eye"></i> Ver contenido
+            </a>
+            <a href="proyecto/S3/programas.rar" class="project-link download-btn" download>
+                <i class="fas fa-download"></i> Descargar
+            </a>
+            <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank">
+                <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+        </div>
+
+        <!-- Tercera fila de botones (si necesitas más filas) -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="aplicaciones3">
+            <label for="aplicaciones3">Ejercicio 3</label>
+        </div>
+        <div class="button-row">
+            <a href="proyecto/S3/programas/programas/proyecto2.dart" class="project-link" onclick="verContenido(event, this)">
+                <i class="fas fa-eye"></i> Ver contenido
+            </a>
+            <a href="proyecto/S3/programas.rar" class="project-link download-btn" download>
+                <i class="fas fa-download"></i> Descargar
+            </a>
+            <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank">
+                <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+        </div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="aplicaciones3">
+            <label for="aplicaciones3">Ejercicio 4</label>
+        </div>
+        <div class="button-row">
+            <a href="proyecto/S3/programas/programas/proyecto3.dart" class="project-link" onclick="verContenido(event, this)">
+                <i class="fas fa-eye"></i> Ver contenido
+            </a>
+            <a href="proyecto/S3/programas.rar" class="project-link download-btn" download>
+                <i class="fas fa-download"></i> Descargar
+            </a>
+            <a href="https://github.com/usuario/proyecto" class="project-link github-btn" target="_blank">
+                <i class="fab fa-github"></i> Ver en GitHub
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        <!-- Semana 4 -->
+        <div class="project">
+            <h3 class="week-title" onclick="toggleMenu('semana4', this)">
+                Semana 4: Integración Backend
+                <i class="arrow-icon">&#9650;</i> <!-- Ícono de flecha -->
+            </h3>
+            <div id="semana4" class="week-content">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="backend">
+                    <label for="backend">Integración Backend</label>
+                </div>
+                <a href="#" class="project-link"><i class="fas fa-eye"></i> Ver contenido</a>
+                <a href="#" class="project-link download-btn"><i class="fas fa-download"></i> Descargar</a>
+                <a href="#" class="project-link github-btn"><i class="fab fa-github"></i> Ver en GitHub</a>
+            </div>
+        </div>
+
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Tu Said. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+            <a href="#proyectos"><i class="fas fa-folder-open"></i> Proyectos</a>
+            <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- Tu archivo JavaScript -->
+</body>
+</html>
